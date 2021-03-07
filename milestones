@@ -1,0 +1,26 @@
+Part 1: database creation:
+
+(A) Fetch historical data:
+    (1)(x) Code in place to download all daily data of a ticker from API.
+    (2)(x) Code in place to clean a single ticker.
+    (3)(x) Wrapper code to loop over a list of tickers and perform (1) and (2)
+
+(B) Get list of all current SPACs premerge:
+    (1)(x) Scrape https://stockmarketmba.com/listofshellcompanies.php
+    (2)(x) Postprocess and create table current_spacs
+
+(C) Get list of all merged SPACs:
+    (1)( ) Scrape https://spactrack.net/closedspacs/
+    (2)( ) Postproces and create table merged_spacs
+
+(D) Create overview of all SPAC histories:
+    (1)( ) Apply (A) on all in (B)
+    (2)( ) Apply (A) on all in (C) on the pre and post merge tickers
+    (3)( ) Combine in the table daily_overview
+
+(E) Updating functions:
+    (1)( ) For (A) make sure we only read the data not yet in the database
+    (2)( ) Write checks that assure data completeness
+
+(F) Find the dates of the merger announcements:
+    TODO see if these are collected, if not, handwork.
