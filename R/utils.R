@@ -23,3 +23,14 @@ check_spacs_table <- function(x) {
               "% traded", "Action")
   check_struct(colnames(x), values, "SPACS table")
 }
+
+check_merged_table <- function(x) {
+  values <- c("Post-SPAC Ticker Symbol", "Post-SPAC Company Name", "Merged Company Name (if Different than DeSPAC)",
+              "SPAC Name / Ticker", "Merger Completion Date (Announced)", "Post-Completion Events",
+              "Total Return (from SPAC IPO price)", "Annualized Return (from SPAC IPO)",
+              "Current Price", "% Change Prev", "Market Cap", "Warrant Trading Status",
+              "Warrant Link", "SPAC IPO Date", "SPAC IPO Size (M)", "SPAC Initial Target Industry",
+              "Notable Leadership / Sponsor", "SPAC Underwriter(s)", "Status",
+              "Closing Press Release", "Merger Partner Leadership", "Est. Date Warrants Exercisable")
+  check_struct(colnames(x), values, "merged table")
+}
